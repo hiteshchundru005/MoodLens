@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Tool</h1>
+        <p>Enter text to analyze its sentiment (Positive, Negative, Neutral)</p>
+        
+        <textarea id="inputText" placeholder="Type your review or tweet here..."></textarea>
+        <button onclick="analyzeSentiment()">Analyze</button>
+        
+        <div id="result">
+            <h3>Result:</h3>
+            <p id="sentiment">Sentiment: -</p>
+            <p id="confidence">Confidence: -</p>
+        </div>
+    </div>
 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
